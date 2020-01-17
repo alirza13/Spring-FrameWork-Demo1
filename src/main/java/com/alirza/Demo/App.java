@@ -1,5 +1,8 @@
 package com.alirza.Demo;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 /**
  * Hello world!
  *
@@ -8,9 +11,8 @@ public class App
 {
     public static void main( String[] args )
     {
-        Car car = new Car();
-        car.Drive();
-        Bike bike = new Bike();
-        bike.Drive();
+    	ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+    	Vehicle vehicle = (Vehicle)context.getBean("vehicle");
+    	vehicle.Drive();
     }
 }
