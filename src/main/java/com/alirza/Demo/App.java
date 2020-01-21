@@ -14,5 +14,17 @@ public class App
     	ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
     	Vehicle vehicle = (Vehicle)context.getBean("vehicle");
     	vehicle.Drive();
+    	Stack<Integer> stack1 = new Stack<Integer>(4);
+    	stack1.push(1);
+    	stack1.push(2);
+    	System.out.println(stack1.pop());
+    	System.out.println(stack1.pop());
+    	System.out.println(stack1.pop());
+    	stack1.push(1);
+    	stack1.push(2);
+    	System.out.println(stack1.pop());
+    	System.out.println(stack1.pop());
+    	System.out.println(stack1.pop());
+    	System.out.println(stack1.pop());
     }
 }
